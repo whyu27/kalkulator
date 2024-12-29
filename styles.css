@@ -1,3 +1,4 @@
+/* Mengatur body agar kalkulator berada di tengah halaman */
 body {
     display: flex;
     justify-content: center;
@@ -5,40 +6,82 @@ body {
     height: 100vh;
     background-color: #f0f0f0;
     margin: 0;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Kalkulator dengan background putih dan bayangan */
 .calculator {
     background-color: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 280px; /* Membuat kalkulator sedikit lebih lebar */
 }
 
+/* Tampilan layar input kalkulator */
 #display {
     width: 100%;
-    height: 40px;
-    margin-bottom: 10px;
+    height: 50px;
+    margin-bottom: 20px;
     text-align: right;
-    font-size: 24px;
+    font-size: 28px; /* Membuat teks lebih besar */
     padding: 10px;
     box-sizing: border-box;
+    border: 2px solid #ccc; /* Menambahkan border untuk input */
+    border-radius: 10px;
+    background-color: #f9f9f9;
 }
 
+/* Mengatur tombol-tombol kalkulator */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
+/* Styling untuk setiap tombol kalkulator */
 button {
-    height: 50px;
-    font-size: 18px;
+    height: 60px; /* Ukuran tombol lebih tinggi */
+    font-size: 22px; /* Ukuran font yang sedikit lebih besar */
     background-color: #e0e0e0;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px; /* Tombol dengan sudut lebih bulat */
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Menambahkan transisi pada background */
+}
+
+button:hover {
+    background-color: #d1d1d1; /* Efek hover lebih jelas */
 }
 
 button:active {
-    background-color: #d0d0d0;
+    background-color: #b0b0b0; /* Efek saat tombol ditekan */
+}
+
+/* Styling untuk tombol operator (+, -, *, /) */
+button.operator {
+    background-color: #ffb74d; /* Warna tombol operator */
+    color: white;
+}
+
+button.operator:hover {
+    background-color: #ff9800; /* Efek hover lebih gelap */
+}
+
+button.operator:active {
+    background-color: #f57c00; /* Efek klik lebih gelap */
+}
+
+/* Styling untuk tombol = dan C */
+button.equal, button.clear {
+    background-color: #4caf50; /* Warna tombol '=' dan 'C' */
+    color: white;
+}
+
+button.equal:hover, button.clear:hover {
+    background-color: #45a049; /* Efek hover lebih gelap */
+}
+
+button.equal:active, button.clear:active {
+    background-color: #388e3c; /* Efek klik lebih gelap */
 }
